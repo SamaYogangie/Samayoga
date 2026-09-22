@@ -1,0 +1,728 @@
+/* =========================================================
+   SAMA YOGA
+   Estilos principales
+   ========================================================= */
+
+:root {
+  --cream: #f4f0e8;
+  --ivory: #faf8f3;
+  --sage: #c8d0c0;
+  --sage-dark: #788372;
+  --earth: #ddd3c5;
+  --brown: #665c50;
+  --dark: #34342f;
+  --white: #ffffff;
+
+  --serif: "Cormorant Garamond", Georgia, serif;
+  --sans: "Inter", Arial, sans-serif;
+
+  --max-width: 1180px;
+  --radius: 2px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--ivory);
+  color: var(--dark);
+  font-family: var(--sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container {
+  width: min(100% - 48px, var(--max-width));
+  margin: 0 auto;
+}
+
+.narrow {
+  max-width: 760px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.site-header {
+  position: absolute;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: var(--white);
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 88px;
+}
+
+.brand {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  letter-spacing: 0.04em;
+}
+
+.brand-name {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.brand-sub {
+  font-size: 11px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.main-nav a {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+}
+
+.main-nav a:hover {
+  opacity: 0.65;
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+
+.hero {
+  position: relative;
+  min-height: 92vh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  background: var(--brown);
+}
+
+.hero-image {
+  position: absolute;
+  inset: 0;
+}
+
+.hero-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(25, 25, 22, 0.72) 0%,
+    rgba(25, 25, 22, 0.2) 55%,
+    rgba(25, 25, 22, 0.15) 100%
+  );
+}
+
+.image-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(
+      135deg,
+      #b9b6a9 0%,
+      #d7d2c6 45%,
+      #a6aa98 100%
+    );
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 11px;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding-bottom: 90px;
+  color: var(--white);
+}
+
+.eyebrow,
+.section-kicker {
+  margin-bottom: 14px;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  max-width: 850px;
+  font-family: var(--serif);
+  font-size: clamp(48px, 7vw, 88px);
+  font-weight: 400;
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+
+.hero h1 em,
+h2 em {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.hero-intro {
+  max-width: 530px;
+  margin-top: 25px;
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 32px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 25px;
+  border: 1px solid transparent;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease,
+    border-color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-dark {
+  background: var(--white);
+  color: var(--dark);
+}
+
+.button-dark:hover {
+  background: var(--cream);
+}
+
+.button-light {
+  border-color: rgba(255, 255, 255, 0.65);
+  color: var(--white);
+}
+
+.button-light:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================================================
+   SECCIONES
+   ========================================================= */
+
+.section {
+  padding: 120px 0;
+}
+
+.intro {
+  background: var(--ivory);
+  text-align: center;
+}
+
+.intro h2,
+.section-heading h2,
+.about-content h2,
+.contact h2 {
+  font-family: var(--serif);
+  font-size: clamp(42px, 5vw, 64px);
+  font-weight: 400;
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+}
+
+.intro .lead {
+  margin-top: 28px;
+  font-size: 17px;
+  line-height: 1.9;
+  color: var(--brown);
+}
+
+/* =========================================================
+   HORARIOS
+   ========================================================= */
+
+.section-sage {
+  background: var(--sage);
+}
+
+.section-heading {
+  max-width: 650px;
+  margin-bottom: 55px;
+}
+
+.section-heading > p:last-child {
+  margin-top: 20px;
+  color: var(--brown);
+}
+
+.schedule-list {
+  border-top: 1px solid rgba(52, 52, 47, 0.25);
+}
+
+.schedule-item {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  padding: 25px 0;
+  border-bottom: 1px solid rgba(52, 52, 47, 0.25);
+}
+
+.schedule-item .day {
+  font-family: var(--serif);
+  font-size: 30px;
+}
+
+.schedule-item .time {
+  align-self: center;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+}
+
+.small-note {
+  margin-top: 24px;
+  font-size: 11px;
+  letter-spacing: 0.05em;
+  color: var(--brown);
+}
+
+/* =========================================================
+   TARIFAS
+   ========================================================= */
+
+.pricing {
+  background: var(--ivory);
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(52, 52, 47, 0.15);
+}
+
+.price-card {
+  min-height: 300px;
+  padding: 40px;
+  background: var(--ivory);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.price-card.featured {
+  background: var(--cream);
+}
+
+.price-label {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.price {
+  margin: 16px 0;
+  font-family: var(--serif);
+  font-size: 64px;
+  line-height: 1;
+}
+
+.price span {
+  font-size: 72px;
+}
+
+.price-card > p:last-child {
+  max-width: 220px;
+  color: var(--brown);
+  font-size: 14px;
+}
+
+/* =========================================================
+   SOBRE MÍ
+   ========================================================= */
+
+.section-earth {
+  background: var(--earth);
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 90px;
+  align-items: center;
+}
+
+.about-image {
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+}
+
+.about-image .image-placeholder {
+  min-height: 100%;
+}
+
+.about-content h2 {
+  margin-bottom: 30px;
+}
+
+.about-content p:not(.section-kicker):not(.signature) {
+  max-width: 570px;
+  margin-bottom: 18px;
+  color: var(--brown);
+  font-size: 15px;
+}
+
+.signature {
+  margin-top: 35px;
+  font-family: var(--serif);
+  font-size: 31px;
+  font-style: italic;
+}
+
+/* =========================================================
+   PRÁCTICA
+   ========================================================= */
+
+.practice {
+  background: var(--ivory);
+}
+
+.centered {
+  max-width: none;
+  text-align: center;
+}
+
+.practice-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 55px;
+  margin-top: 70px;
+}
+
+.practice-item {
+  padding-top: 22px;
+  border-top: 1px solid rgba(52, 52, 47, 0.3);
+}
+
+.practice-item > span {
+  font-size: 10px;
+  letter-spacing: 0.15em;
+}
+
+.practice-item h3 {
+  margin: 25px 0 12px;
+  font-family: var(--serif);
+  font-size: 31px;
+  font-weight: 400;
+}
+
+.practice-item p {
+  max-width: 280px;
+  color: var(--brown);
+  font-size: 14px;
+}
+
+/* =========================================================
+   CONTACTO
+   ========================================================= */
+
+.section-dark {
+  background: var(--dark);
+  color: var(--white);
+}
+
+.contact-inner {
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: clamp(58px, 8vw, 100px);
+}
+
+.contact-text {
+  max-width: 520px;
+  margin: 25px auto 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 15px;
+}
+
+.contact-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  margin-top: 35px;
+}
+
+.button-cream {
+  background: var(--cream);
+  color: var(--dark);
+}
+
+.button-cream:hover {
+  background: var(--white);
+}
+
+.text-link {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  padding-bottom: 3px;
+}
+
+.map-wrap {
+  margin-top: 75px;
+  overflow: hidden;
+  height: 380px;
+  background: #777;
+}
+
+.map-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  filter: grayscale(1);
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.site-footer {
+  background: var(--dark);
+  color: rgba(255, 255, 255, 0.55);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.footer-wrap {
+  min-height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+}
+
+/* =========================================================
+   ANIMACIONES
+   ========================================================= */
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   MÓVIL
+   ========================================================= */
+
+@media (max-width: 760px) {
+
+  .container {
+    width: min(100% - 32px, var(--max-width));
+  }
+
+  .nav-wrap {
+    min-height: 75px;
+  }
+
+  .main-nav {
+    position: absolute;
+    top: 75px;
+    left: 16px;
+    right: 16px;
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 10px 0;
+    background: rgba(52, 52, 47, 0.97);
+  }
+
+  .main-nav.open {
+    display: flex;
+  }
+
+  .main-nav a {
+    padding: 15px 20px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 1px;
+    background: currentColor;
+  }
+
+  .hero {
+    min-height: 88vh;
+  }
+
+  .hero-content {
+    padding-bottom: 55px;
+  }
+
+  .hero h1 {
+    font-size: clamp(46px, 14vw, 70px);
+  }
+
+  .hero-intro {
+    font-size: 14px;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 270px;
+  }
+
+  .section {
+    padding: 85px 0;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .about-content h2 {
+    font-size: 45px;
+  }
+
+  .schedule-item {
+    grid-template-columns: 1fr;
+    gap: 3px;
+  }
+
+  .schedule-item .day {
+    font-size: 28px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .price-card {
+    min-height: 240px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .about-image {
+    max-width: 500px;
+  }
+
+  .practice-grid {
+    grid-template-columns: 1fr;
+    gap: 45px;
+    margin-top: 50px;
+  }
+
+  .practice-item p {
+    max-width: 100%;
+  }
+
+  .contact h2 {
+    font-size: 70px;
+  }
+
+  .map-wrap {
+    height: 300px;
+    margin-top: 55px;
+  }
+
+  .footer-wrap {
+    min-height: 110px;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+}
+
+/* =========================================================
+   REDUCCIÓN DE MOVIMIENTO
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .button {
+    transition: none;
+  }
+}
