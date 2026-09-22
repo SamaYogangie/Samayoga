@@ -24,12 +24,17 @@
 
 <body>
 
-  <!-- NAVEGACIÓN -->
-  <header class="site-header">
-    <div class="container nav-container">
+  <!-- =====================================================
+       HEADER
+  ====================================================== -->
 
-      <a href="#inicio" class="logo">
-        Sama Yoga
+  <header class="site-header">
+
+    <div class="container nav-wrap">
+
+      <a href="#inicio" class="brand">
+        <span class="brand-name">Sama Yoga</span>
+        <span class="brand-sub">Yoga consciente</span>
       </a>
 
       <button class="menu-toggle" aria-label="Abrir menú">
@@ -41,25 +46,38 @@
       <nav class="main-nav">
         <a href="#horarios">Horarios</a>
         <a href="#tarifas">Tarifas</a>
-        <a href="#practica">Mi práctica</a>
+        <a href="#sobre-mi">Mi práctica</a>
         <a href="#nidra">Yoga Nidra</a>
         <a href="#contacto">Contacto</a>
       </nav>
 
     </div>
+
   </header>
 
 
   <main>
 
-    <!-- HERO -->
+    <!-- =====================================================
+         HERO
+    ====================================================== -->
+
     <section class="hero" id="inicio">
 
-      <div class="container hero-grid">
+      <!--
+        AQUÍ IRÁ TU FOTO DE PORTADA.
+        De momento dejamos el espacio preparado.
+      -->
+
+      <div class="hero-image image-placeholder">
+        <span>Tu fotografía aquí</span>
+      </div>
+
+      <div class="container">
 
         <div class="hero-content">
 
-          <p class="section-kicker">
+          <p class="eyebrow">
             SAMA YOGA
           </p>
 
@@ -68,7 +86,7 @@
             <em>amor en cada práctica.</em>
           </h1>
 
-          <p class="hero-text">
+          <p class="hero-intro">
             Un espacio para volver al cuerpo, respirar con presencia
             y habitarte en armonía.
           </p>
@@ -97,21 +115,18 @@
 
         </div>
 
-
-        <!-- FOTO HERO -->
-        <div class="hero-image image-placeholder">
-          <span>Tu fotografía aquí</span>
-        </div>
-
       </div>
 
     </section>
 
 
-    <!-- INTRO -->
-    <section class="section section-light intro">
+    <!-- =====================================================
+         INTRO
+    ====================================================== -->
 
-      <div class="container narrow centered">
+    <section class="section intro">
+
+      <div class="container narrow">
 
         <p class="section-kicker">
           Una práctica para habitarte
@@ -122,14 +137,14 @@
           <em>presencia.</em>
         </h2>
 
-        <p>
+        <p class="lead">
           Para mí, el yoga es una forma de volver a casa.
           De escuchar el cuerpo, observar la respiración,
           aquietar la mente y crear un espacio donde poder
           simplemente estar.
         </p>
 
-        <p>
+        <p class="lead">
           Cada práctica es diferente porque cada persona
           llega diferente. Por eso te acompaño desde la
           escucha, el movimiento consciente y el respeto
@@ -141,8 +156,11 @@
     </section>
 
 
-    <!-- HORARIOS -->
-    <section class="section" id="horarios">
+    <!-- =====================================================
+         HORARIOS
+    ====================================================== -->
+
+    <section class="section section-sage" id="horarios">
 
       <div class="container">
 
@@ -164,36 +182,62 @@
         </div>
 
 
-        <div class="schedule-grid">
+        <div class="schedule-list">
 
-          <article class="schedule-card">
-            <span class="schedule-day">Martes</span>
-            <strong>18:15 – 19:30</strong>
-          </article>
+          <div class="schedule-item">
+            <div class="day">
+              Martes
+            </div>
 
-          <article class="schedule-card">
-            <span class="schedule-day">Jueves</span>
-            <strong>10:00 – 11:15</strong>
-          </article>
+            <div class="time">
+              18:15 – 19:30
+            </div>
+          </div>
 
-          <article class="schedule-card">
-            <span class="schedule-day">Jueves</span>
-            <strong>18:00 – 19:15</strong>
-          </article>
+
+          <div class="schedule-item">
+            <div class="day">
+              Jueves
+            </div>
+
+            <div class="time">
+              10:00 – 11:15
+            </div>
+          </div>
+
+
+          <div class="schedule-item">
+            <div class="day">
+              Jueves
+            </div>
+
+            <div class="time">
+              18:00 – 19:15
+            </div>
+          </div>
 
         </div>
+
+
+        <p class="small-note">
+          Si quieres incorporarte a las clases o conocer
+          la disponibilidad, escríbeme por WhatsApp.
+        </p>
 
       </div>
 
     </section>
 
 
-    <!-- TARIFAS -->
-    <section class="section section-sage" id="tarifas">
+    <!-- =====================================================
+         TARIFAS
+    ====================================================== -->
+
+    <section class="section pricing" id="tarifas">
 
       <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading">
 
           <p class="section-kicker">
             Tarifas
@@ -207,11 +251,11 @@
         </div>
 
 
-        <div class="price-grid">
+        <div class="pricing-grid">
 
           <article class="price-card">
 
-            <p class="section-kicker">
+            <p class="price-label">
               Puntual
             </p>
 
@@ -226,9 +270,9 @@
           </article>
 
 
-          <article class="price-card">
+          <article class="price-card featured">
 
-            <p class="section-kicker">
+            <p class="price-label">
               Regular
             </p>
 
@@ -245,7 +289,7 @@
 
           <article class="price-card">
 
-            <p class="section-kicker">
+            <p class="price-label">
               Regular
             </p>
 
@@ -266,14 +310,21 @@
     </section>
 
 
-    <!-- MI MANERA DE ACOMPAÑARTE -->
-    <section class="section" id="practica">
+    <!-- =====================================================
+         SOBRE MÍ / MI MANERA DE ACOMPAÑARTE
+    ====================================================== -->
+
+    <section class="section section-earth" id="sobre-mi">
 
       <div class="container about-grid">
 
         <!-- FOTO -->
-        <div class="about-image image-placeholder">
-          <span>Tu fotografía aquí</span>
+        <div class="about-image">
+
+          <div class="image-placeholder">
+            <span>Tu fotografía aquí</span>
+          </div>
+
         </div>
 
 
@@ -315,6 +366,10 @@
             descansar.
           </p>
 
+          <p class="signature">
+            Mover · respirar · sentir · soltar.
+          </p>
+
         </div>
 
       </div>
@@ -322,8 +377,11 @@
     </section>
 
 
-    <!-- LA PRÁCTICA -->
-    <section class="section section-earth">
+    <!-- =====================================================
+         LA PRÁCTICA
+    ====================================================== -->
+
+    <section class="section practice">
 
       <div class="container">
 
@@ -334,8 +392,8 @@
           </p>
 
           <h2>
-            Mover · respirar ·
-            <em>sentir · soltar.</em>
+            Un recorrido hacia
+            <em>dentro.</em>
           </h2>
 
         </div>
@@ -384,6 +442,10 @@
 
           </div>
 
+        </div>
+
+
+        <div class="practice-grid">
 
           <div class="practice-item">
 
@@ -392,8 +454,8 @@
             <h3>Sonido</h3>
 
             <p>
-              Terminar la práctica con una relajación
-              profunda acompañada por cuencos de cuarzo.
+              Cada sesión termina con una relajación profunda
+              acompañada por el sonido de los cuencos de cuarzo.
             </p>
 
           </div>
@@ -405,12 +467,15 @@
     </section>
 
 
-    <!-- YOGA NIDRA -->
-    <section class="section section-sage nidra" id="nidra">
+    <!-- =====================================================
+         YOGA NIDRA
+    ====================================================== -->
+
+    <section class="section section-sage" id="nidra">
 
       <div class="container">
 
-        <div class="section-heading centered">
+        <div class="section-heading">
 
           <p class="section-kicker">
             Yoga Nidra · cuencos de cuarzo
@@ -441,120 +506,138 @@
         </div>
 
 
-        <!-- CALENDARIO DE SESIONES -->
-        <div class="nidra-calendar">
+        <!-- CALENDARIO -->
 
-          <div class="section-heading centered">
+        <div class="section-heading">
 
-            <p class="section-kicker">
-              Próximas sesiones
-            </p>
+          <p class="section-kicker">
+            Próximas sesiones
+          </p>
 
-            <h3>
-              Un espacio que iremos
-              <em>llenando juntas.</em>
-            </h3>
+          <h2>
+            Fechas para
+            <em>descansar.</em>
+          </h2>
 
-            <p>
-              Las próximas fechas de Yoga Nidra estarán disponibles
-              aquí. Las sesiones podrán realizarse en Altsasu
-              o en Alzuza.
-            </p>
+          <p>
+            Las próximas sesiones de Yoga Nidra estarán disponibles
+            aquí. Habrá encuentros en Altsasu y en Alzuza.
+          </p>
 
-          </div>
+        </div>
 
+
+        <div class="schedule-list">
 
           <!--
-            AQUÍ AÑADIREMOS LAS PRÓXIMAS SESIONES.
+            AQUÍ IREMOS AÑADIENDO LAS SESIONES.
 
             Ejemplo:
 
-            <article class="nidra-event">
-
-              <div class="nidra-date">
-                <span class="nidra-day">21</span>
-                <span class="nidra-month">JUN</span>
+            <div class="schedule-item">
+              <div class="day">
+                21 JUN
               </div>
 
-              <div class="nidra-info">
-                <h3>Yoga Nidra · cuencos de cuarzo</h3>
-                <p>19:30 – 21:00</p>
-                <p>📍 Altsasu</p>
+              <div class="time">
+                Yoga Nidra · 19:30 – 21:00 · Altsasu
               </div>
-
-              <a
-                href="ENLACE_DE_WHATSAPP"
-                class="button button-dark"
-              >
-                Reservar
-              </a>
-
-            </article>
+            </div>
           -->
 
+          <div class="schedule-item">
 
-          <div class="nidra-coming">
+            <div class="day">
+              Próximamente
+            </div>
 
-            <span class="nidra-coming-mark">✦</span>
+            <div class="time">
+              Nuevas sesiones · Altsasu / Alzuza
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <p class="small-note">
+          No necesitas experiencia previa. Solo ropa cómoda,
+          un espacio para ti y disposición para descansar.
+        </p>
+
+
+        <!-- TARIFAS YOGA NIDRA -->
+
+        <div class="section-heading" style="margin-top: 90px;">
+
+          <p class="section-kicker">
+            Tarifas Yoga Nidra
+          </p>
+
+          <h2>
+            Regálate un espacio de
+            <em>descanso.</em>
+          </h2>
+
+        </div>
+
+
+        <div class="pricing-grid">
+
+          <article class="price-card">
+
+            <p class="price-label">
+              Individual
+            </p>
+
+            <div class="price">
+              60 €
+            </div>
 
             <p>
-              Próximamente nuevas sesiones
+              Sesión de 1 hora
             </p>
 
-            <span>
-              Altsasu · Alzuza
-            </span>
+          </article>
 
-          </div>
+
+          <article class="price-card featured">
+
+            <p class="price-label">
+              Individual
+            </p>
+
+            <div class="price">
+              70 €
+            </div>
+
+            <p>
+              Sesión de 1 hora y 30 min
+            </p>
+
+          </article>
+
+
+          <article class="price-card">
+
+            <p class="price-label">
+              Grupal
+            </p>
+
+            <div class="price">
+              30 €
+            </div>
+
+            <p>
+              Por persona
+            </p>
+
+          </article>
 
         </div>
 
 
-        <!-- PRECIOS YOGA NIDRA -->
-        <div class="nidra-prices">
-
-          <div class="nidra-price-group">
-
-            <p class="section-kicker">
-              Sesiones individuales
-            </p>
-
-            <div class="nidra-price">
-              <span>1 hora</span>
-              <strong>60 €</strong>
-            </div>
-
-            <div class="nidra-price">
-              <span>1 hora y 30 min</span>
-              <strong>70 €</strong>
-            </div>
-
-          </div>
-
-
-          <div class="nidra-price-group">
-
-            <p class="section-kicker">
-              Sesiones grupales
-            </p>
-
-            <div class="nidra-price">
-              <span>Sesión grupal</span>
-              <strong>30 € / persona</strong>
-            </div>
-
-          </div>
-
-        </div>
-
-
-        <div class="nidra-footer">
-
-          <p>
-            No necesitas experiencia previa.
-            Solo ropa cómoda, un espacio para ti
-            y disposición para descansar.
-          </p>
+        <div class="contact-actions">
 
           <a
             class="button button-dark"
@@ -572,7 +655,10 @@
     </section>
 
 
-    <!-- TAMBIÉN PUEDES ENCONTRARME -->
+    <!-- =====================================================
+         TAMBIÉN PUEDES ENCONTRARME
+    ====================================================== -->
+
     <section class="section" id="donde">
 
       <div class="container">
@@ -605,8 +691,8 @@
             <h3>Polideportivo Zelandi</h3>
 
             <p>
-              Un espacio para practicar, moverse
-              y conectar con el cuerpo.
+              Un espacio donde compartir la práctica
+              de yoga y movimiento consciente.
             </p>
 
           </div>
@@ -619,8 +705,8 @@
             <h3>Irantzu Gonzalez Dantza Eskola</h3>
 
             <p>
-              Movimiento, consciencia corporal
-              y presencia a través de la práctica.
+              Un espacio para explorar el cuerpo,
+              el movimiento y la presencia.
             </p>
 
           </div>
@@ -646,34 +732,33 @@
     </section>
 
 
-    <!-- CONTACTO -->
-    <section class="section section-earth" id="contacto">
+    <!-- =====================================================
+         CONTACTO
+    ====================================================== -->
 
-      <div class="container contact-grid">
+    <section class="section section-dark" id="contacto">
 
-        <div>
+      <div class="container contact-inner">
 
-          <p class="section-kicker">
-            Contacto
-          </p>
+        <p class="section-kicker">
+          Contacto
+        </p>
 
-          <h2>
-            ¿Hablamos?
-          </h2>
+        <h2>
+          ¿Hablamos?
+        </h2>
 
-          <p>
-            Si quieres conocer las clases, reservar una sesión
-            de Yoga Nidra o simplemente preguntarme algo,
-            escríbeme.
-          </p>
-
-        </div>
+        <p class="contact-text">
+          Si quieres conocer las clases, reservar una sesión
+          de Yoga Nidra o simplemente preguntarme algo,
+          escríbeme.
+        </p>
 
 
         <div class="contact-actions">
 
           <a
-            class="button button-dark"
+            class="button button-cream"
             href="https://wa.me/34694203704?text=Hola%2C%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n%20sobre%20Sama%20Yoga."
             target="_blank"
             rel="noopener noreferrer"
@@ -682,13 +767,26 @@
           </a>
 
           <a
-            class="button button-light"
+            class="text-link"
             href="https://www.instagram.com/samaa_yoga/"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Instagram
+            Instagram · @samaa_yoga
           </a>
+
+        </div>
+
+
+        <!-- MAPA -->
+
+        <div class="map-wrap">
+
+          <iframe
+            src="https://www.google.com/maps?q=Alzuza%2C%20Navarra&output=embed"
+            loading="lazy"
+            title="Ubicación de Sama Yoga en Alzuza"
+          ></iframe>
 
         </div>
 
@@ -699,16 +797,16 @@
   </main>
 
 
-  <!-- FOOTER -->
+  <!-- =====================================================
+       FOOTER
+  ====================================================== -->
+
   <footer class="site-footer">
 
-    <div class="container footer-content">
+    <div class="container footer-wrap">
 
       <div>
-        <strong>Sama Yoga</strong>
-        <span>
-          Consciencia en movimiento, amor en cada práctica.
-        </span>
+        Sama Yoga · Yoga consciente
       </div>
 
       <div>
